@@ -13,31 +13,22 @@ layout: default
   <button id="generator">Generate a DH Paper</button>
 </div>
 <script type="text/javascript">
-var one = new Array({{ site.data.words.one | join: '","' | prepend: '"' | append: '"' }});
-var two = new Array({{ site.data.words.two | join: '","' | prepend: '"' | append: '"' }});
-var three = new Array({{ site.data.words.three | join: '","' | prepend: '"' | append: '"' }});
-var four = new Array({{ site.data.words.four | join: '","' | prepend: '"' | append: '"' }});
-var first, second, third, fourth;
-$( document ).ready(function() {
-  first = one[Math.floor(Math.random()*one.length)];
-  second = two[Math.floor(Math.random()*two.length)];
-  third = three[Math.floor(Math.random()*three.length)];
-  fourth = four[Math.floor(Math.random()*four.length)];
-  console.log(first, second, third, fourth);
-  $('#first-word').text(first);
-  $('#second-word').text(second);
-  $('#third-word').text(third);
-  $('#fourth-word').text(fourth);
-});
-$('#generator').on( "click", function() {
-  first = one[Math.floor(Math.random()*one.length)];
-  second = two[Math.floor(Math.random()*two.length)];
-  third = three[Math.floor(Math.random()*three.length)];
-  fourth = four[Math.floor(Math.random()*four.length)];
-  console.log(first, second, third, fourth);
-  $('#first-word').text(first);
-  $('#second-word').text(second);
-  $('#third-word').text(third);
-  $('#fourth-word').text(fourth);
-});
+  var one = new Array({{ site.data.words.one | join: '","' | prepend: '"' | append: '"' }});
+  var two = new Array({{ site.data.words.two | join: '","' | prepend: '"' | append: '"' }});
+  var three = new Array({{ site.data.words.three | join: '","' | prepend: '"' | append: '"' }});
+  var four = new Array({{ site.data.words.four | join: '","' | prepend: '"' | append: '"' }});
+  var first, second, third, fourth;
+  var generate = function() {
+    first = one[Math.floor(Math.random()*one.length)];
+    second = two[Math.floor(Math.random()*two.length)];
+    third = three[Math.floor(Math.random()*three.length)];
+    fourth = four[Math.floor(Math.random()*four.length)];
+    console.log(first, second, third, fourth);
+    $('#first-word').text(first);
+    $('#second-word').text(second);
+    $('#third-word').text(third);
+    $('#fourth-word').text(fourth);
+  }
+  $( document ).ready(generate);
+  $('#generator').on( "click", generate);
 </script>
