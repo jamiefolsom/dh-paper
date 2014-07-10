@@ -2,7 +2,7 @@
 title: DH Paper Generator
 email: hyperstudio@mit.edu
 description: "A paper title generator for the Digital Humanities"
-baseurl: "http://jamiefolsom.github.io/dh-paper"
+baseurl: ""
 url: "http://jamiefolsom.github.io/dh-paper"
 twitter_username: mithyperstudio
 github_username:  hyperstudio
