@@ -1,11 +1,11 @@
 # Site settings
 title: DH Paper Generator
-email: jfolsom@mit.edu
+email: hyperstudio@mit.edu
 description: "A paper title generator for the Digital Humanities"
 baseurl: "http://jamiefolsom.github.io/dh-paper"
 url: "http://jamiefolsom.github.io/dh-paper"
-twitter_username: jamiefolsom
-github_username:  jamiefolsom
+twitter_username: mithyperstudio
+github_username:  hyperstudio
 
 # Build settings
 markdown: kramdown
