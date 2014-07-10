@@ -4,6 +4,7 @@ layout: default
 
 <div class="home">
   <button id="generator" class="btn btn-success">Generate a DH Paper</button>
+  <!-- Add a tweet button like this: http://stackoverflow.com/questions/9215806/how-to-update-the-twitter-share-button-url-with-dynamic-content -->
   <header class="post-header">
     <h1>
       <span id="first-word"></span> of the
@@ -14,22 +15,53 @@ layout: default
   </header>
 </div>
 <script type="text/javascript">
+
   var one = new Array({{ site.data.words.one | join: '","' | prepend: '"' | append: '"' }});
   var two = new Array({{ site.data.words.two | join: '","' | prepend: '"' | append: '"' }});
   var three = new Array({{ site.data.words.three | join: '","' | prepend: '"' | append: '"' }});
   var four = new Array({{ site.data.words.four | join: '","' | prepend: '"' | append: '"' }});
+
   var first, second, third, fourth;
+
+
+  var load_or_generate = function() {
+    if (window.location.hash.substr(1) != "") {
+      load();
+    }
+    else {
+      generate();
+    }
+  }
+
+  var load = function() {
+    var existing_title = window.location.hash.substr(1);
+    console.log(existing_title);
+    segments = existing_title.split('-');
+    first = segments[0];
+    second = segments[1];
+    third = segments[2];
+    fourth = segments[3];
+    set();
+  }
+
   var generate = function() {
     first = one[Math.floor(Math.random()*one.length)];
     second = two[Math.floor(Math.random()*two.length)];
     third = three[Math.floor(Math.random()*three.length)];
     fourth = four[Math.floor(Math.random()*four.length)];
-    console.log(first, second, third, fourth);
+    set();
+  };
+
+  var set = function() {
     $('#first-word').text(first);
     $('#second-word').text(second);
     $('#third-word').text(third);
     $('#fourth-word').text(fourth);
+    event.preventDefault();
+    window.location.hash = first + "-" + second + "-" + third + "-" + fourth;
   }
-  $( document ).ready(generate);
+
+  $( document ).ready(load_or_generate);
   $('#generator').on( "click", generate);
+
 </script>
