@@ -2,7 +2,7 @@
 title: DH Paper Generator
 email: jfolsom@mit.edu
 description: "A paper title generator for the Digital Humanities"
-baseurl: ""
+baseurl: "http://jamiefolsom.github.io/dh-paper"
 url: "http://jamiefolsom.github.io/dh-paper"
 twitter_username: jamiefolsom
 github_username:  jamiefolsom
