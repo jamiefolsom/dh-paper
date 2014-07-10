@@ -3,15 +3,21 @@ layout: default
 ---
 
 <div class="home">
-
   <h1>Words</h1>
-
-  <ul class="posts">
-    {% for word in site.data.words.one %}
-      <li>
-        {{ word }}
-      </li>
-    {% endfor %}
-  </ul>
-
+  <p id="first-word"></p>
+  <button id="generator">Generate a DH Paper</button>
 </div>
+<script type="text/javascript">
+var one = new Array({{ site.data.words.one | join: '","' | prepend: '"' | append: '"' }});
+var item;
+$( document ).ready(function() {
+  item = one[Math.floor(Math.random()*one.length)];
+  console.log(item);
+  $('#first-word').text(item);
+});
+$('#generator').on( "click", function() {
+  item = one[Math.floor(Math.random()*one.length)];
+  console.log(item);
+  $('#first-word').text(item);
+});
+</script>
