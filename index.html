@@ -3,13 +3,15 @@ layout: default
 ---
 
 <div class="home">
-  <h1>
-    <span id="first-word"></span> of the
-    <span id="second-word"></span> in the
-    <span id="third-word"></span> of
-    <span id="fourth-word"></span>
-  </h1>
-  <button id="generator">Generate a DH Paper</button>
+  <button id="generator" class="btn btn-success">Generate a DH Paper</button>
+  <header class="post-header">
+    <h1>
+      <span id="first-word"></span> of the
+      <span id="second-word"></span> in the
+      <span id="third-word"></span> of
+      <span id="fourth-word"></span>
+    </h1>
+  </header>
 </div>
 <script type="text/javascript">
   var one = new Array({{ site.data.words.one | join: '","' | prepend: '"' | append: '"' }});
