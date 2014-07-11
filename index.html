@@ -69,13 +69,17 @@ layout: default
   };
 
   var set = function() {
+    first = toTitleCase(first);
+    second = toTitleCase(second);
+    third = toTitleCase(third);
+    fourth = toTitleCase(fourth);
     $('#first-word').text(first);
     $('#second-word').text(second);
     $('#third-word').text(third);
     $('#fourth-word').text(fourth);
     event.preventDefault();
     window.location.hash = first + "-" + second + "-" + third + "-" + fourth;
-    var title = toTitleCase(first) + " of the " + toTitleCase(second) + " in the " + toTitleCase(third) + " of " + toTitleCase(fourth);
+    var title = first + " of the " + second + " in the " + third + " of " + fourth;
     updateTwitterValues(window.location, title);
   }
 
