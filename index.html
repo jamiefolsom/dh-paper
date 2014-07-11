@@ -32,7 +32,7 @@ layout: default
   function updateTwitterValues(share_url, title) {
     // clear out the <a> tag that's currently there...probably don't really need this since you're replacing whatever is in there already.
     $("#twitter-share-section").html('&nbsp;');
-    $("#twitter-share-section").html('<a href="https://twitter.com/share" class="twitter-share-button" data-url="' + share_url +'" data-size="large" data-text="' + title + '" data-count="none" data-hashtags="dh2014">Tweet</a>');
+    $("#twitter-share-section").html('<a href="https://twitter.com/share" class="twitter-share-button" data-url="' + share_url +'" data-size="large" data-text="' + title + '" data-count="none" data-hashtags="dh2014, dhpaper">Tweet</a>');
     twttr.widgets.load();
   }
 
@@ -71,7 +71,8 @@ layout: default
     $('#fourth-word').text(fourth);
     event.preventDefault();
     window.location.hash = first + "-" + second + "-" + third + "-" + fourth;
-    updateTwitterValues(window.location, one + " of the " + two + " in the " + three + " of " + four);
+    var title = first + " of the " + second + " in the " + third + " of " + fourth;
+    updateTwitterValues(window.location, title);
   }
 
   $( document ).ready(load_or_generate);
