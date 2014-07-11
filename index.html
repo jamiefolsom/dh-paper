@@ -36,6 +36,10 @@ layout: default
     twttr.widgets.load();
   }
 
+  function toTitleCase(str) {
+    return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+  }
+
   var load_or_generate = function() {
     if (window.location.hash.substr(1) != "") {
       load();
@@ -71,7 +75,7 @@ layout: default
     $('#fourth-word').text(fourth);
     event.preventDefault();
     window.location.hash = first + "-" + second + "-" + third + "-" + fourth;
-    var title = first + " of the " + second + " in the " + third + " of " + fourth;
+    var title = toTitleCase(first) + " of the " + toTitleCase(second) + " in the " + toTitleCase(third) + " of " + toTitleCase(fourth);
     updateTwitterValues(window.location, title);
   }
 
