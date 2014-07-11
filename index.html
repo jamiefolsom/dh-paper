@@ -71,7 +71,7 @@ layout: default
     $('#fourth-word').text(fourth);
     event.preventDefault();
     window.location.hash = first + "-" + second + "-" + third + "-" + fourth;
-    updateTwitterValues(window.location, "I generated a DH Paper Title! (A tongue-in-cheek DH project)");
+    updateTwitterValues(window.location, one + " of the " + two + " in the " + three + " of " + four);
   }
 
   $( document ).ready(load_or_generate);
