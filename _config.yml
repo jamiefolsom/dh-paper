@@ -1,6 +1,6 @@
 ---
 title: DH Paper Generator
-timezone: UTC
+timezone: America/New_York
 collections:
   posts:
     title: Posts
@@ -8,11 +8,11 @@ collections:
   uploads:
     title: Uploads
     output: true
-email: hyperstudio@mit.edu
+email: jamiefolsom@gmail.com
 description: A paper title generator for the Digital Humanities
 baseurl: http://jamiefolsom.github.io/dh-paper
 url: http://jamiefolsom.github.io/dh-paper
-twitter_username: mithyperstudio
-github_username: hyperstudio
+twitter_username: jamiefolsom
+github_username: jamiefolsom
 markdown: kramdown
 permalink: pretty
