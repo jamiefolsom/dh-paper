@@ -1,7 +1,7 @@
 ---
-layout: page
 title: About
-permalink: /about/
+permalink: "/about/"
+layout: page
 ---
 
 The [papers](http://dharchive.org/#n6-Long-Papers) at DH2014 were awesome. We noticed some common patterns in their titles (our own included, of course).
