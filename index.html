@@ -47,7 +47,7 @@ layout: default
     // clear out the <a> tag that's currently there...probably don't really need this since you're replacing whatever is in there already.
     $("#twitter-share-section").html('&nbsp;');
     $("#twitter-share-section").html('<a href="https://twitter.com/share" class="twitter-share-button" data-url="' + share_url +'" data-size="large" data-text="' + title + '" data-count="none" data-hashtags="dh2014, dhpaper">Tweet</a>');
-    twttr.widgets.load();
+    window.twttr.widgets.load();
   }
 
   function toTitleCase(str) {
